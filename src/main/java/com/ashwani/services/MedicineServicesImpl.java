@@ -1,16 +1,21 @@
 package com.ashwani.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ashwani.Dao.MedicineDao;
 import com.ashwani.entity.Medicine;
 
 @Service
 public class MedicineServicesImpl implements MedicineServices {
+	
+	@Autowired
+	MedicineDao mediDao;
 
 	@Override
 	public String add(Medicine medi) {
-		// TODO Auto-generated method stub
-		return null;
+		String status=mediDao.mAdd(medi);
+		return status;
 	}
 
 	@Override

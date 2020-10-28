@@ -48,15 +48,8 @@ public class MedicineController {
 		medi.setmName(name);
 		medi.setmCount(Integer.parseInt(count));
 		medi.setmDescription(des);
-		
 		String status=mediService.add(medi);
-		return status;
-		
-		
-		
-		
-		
-		
+		return status;		
 		
 	}
 
